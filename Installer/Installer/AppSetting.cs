@@ -13,9 +13,11 @@ namespace Installer
         private AppSetting()
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
+            var manifestResourceNames = executingAssembly.GetManifestResourceNames();
             using (Stream stream = executingAssembly.GetManifestResourceStream("Installer.appSetting.json"))
             using (StreamReader reader = new StreamReader(stream))
             {
+                
                 var appSettingModel = JsonSerializer.Deserialize<AppSettingModel>(reader.ReadToEnd());
                 IsLicence = appSettingModel.LicenceStatus;
                 LicenceText = appSettingModel.LicenceText;
