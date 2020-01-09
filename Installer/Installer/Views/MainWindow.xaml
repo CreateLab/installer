@@ -20,7 +20,7 @@
         <reactiveUi:RoutedViewHost.DefaultContent>
          <Grid RowDefinitions="* Auto 0.2*" ColumnDefinitions="* Auto 0.1*">
              <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Description}"></TextBlock>
-             <Button Grid.Row="1" Grid.Column="1" Content="Next" Command="{Binding GoNext}"></Button> 
+             <Button Grid.Row="1" Grid.Column="1" Content="Next" Command="{Binding Next}"></Button> 
          </Grid>
         </reactiveUi:RoutedViewHost.DefaultContent>
     </reactiveUi:RoutedViewHost>
